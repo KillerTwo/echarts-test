@@ -16,6 +16,16 @@ import RenderTable from './components/tables/rendertable';
 import MyAudio from './components/audio/myaudio';
 
 
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee, faRandom } from '@fortawesome/free-solid-svg-icons'
+import AjaxRequest from './components/audio/ajaxrequest';
+
+library.add(fab, faCheckSquare, faCoffee, faRandom);
+
+
+
 class App extends Component {
   operator = ({hello,world,name,age})=>{
     console.log('this is function output.');
@@ -63,12 +73,14 @@ class App extends Component {
         <hr/> */}
         {/* <MyPdfViewer /> */}
         <hr />
-        <EditableTable />
+        {/* <EditableTable /> */}
         <hr />
         {/* <h2>{copyData.name}</h2> */}
-        <RenderTable />
+        {/* <RenderTable /> */}
         <hr/>
         <MyAudio />
+        <hr/>
+        <AjaxRequest />
       </div>
     );
   }
